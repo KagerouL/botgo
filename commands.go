@@ -26,15 +26,15 @@ func handleCommand(v *events.Message) {
 
 	switch {
 
-	case text == "ping":
-		sendMessage(sender, "🏓 Pong!")
-
-	case text == "menu" || text == "Menu":
+	case text == "/manual":
 		sendMessage(sender,
-			"Terminal O' WORLD\n\n"+
-				"/\n"+
-				"menu",
+			"List command\n\n"+
+				"/manual"+
+				"/ping",
 		)
+
+	case text == "/ping":
+		sendMessage(sender, "Pong!")
 
 	}
 
