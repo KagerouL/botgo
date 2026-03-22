@@ -29,13 +29,16 @@ func handleCommand(v *events.Message) {
 	case text == "/manual":
 		sendMessage(sender,
 			"List command\n\n"+
-				"/manual"+
-				"/ping",
+				"/manual\n"+
+				"/ping\n"+
+				"/fih",
 		)
 
 	case text == "/ping":
 		sendMessage(sender, "Pong!")
 
+	case text == "/fih":
+		sendMessage(sender, "🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟🐟")
 	}
 
 	messageLogger.Println(sender.String(), "|", text)
@@ -52,6 +55,4 @@ func sendMessage(jid types.JID, text string) {
 		jid,
 		msg,
 	)
-
-	messageLogger.Println("BOT ->", jid.String(), "|", text)
 }
